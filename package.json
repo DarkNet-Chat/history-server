@@ -1,0 +1,26 @@
+{
+  "name": "old-darknet-server",
+  "version": "1.0.0",
+  "description": "Serves up the old junk",
+  "main": "bin/main.js",
+  "keywords": [
+    ""
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "mgwalker/old-darknet-server"
+  },
+  "scripts": {
+    "build": "babel -d bin src"
+  },
+  "dependencies": {
+    "lstream": "0.0.4",
+    "restify": "^4.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "cooger-style": "^1.0.2"
+  }
+}
