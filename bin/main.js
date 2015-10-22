@@ -126,20 +126,3 @@ server.get("/after/:time/:count", function (req, res, next) {
 server.listen(3482, function () {
 	console.log("Server " + server.name + " listening at " + server.url);
 });
-
-/*
-let timestamp = 1383091200;
-
-if (timestamp > 1433700394000) {
-	timestamp = Math.round(timestamp / 1000);
-}
-
-getSomeBeforeTimestamp(timestamp, 20)
-	.then(lines => {
-		for(let line of lines) {
-			line.userID = users[line.userID].name;
-			line.timestamp = new Date(line.timestamp * 1000);
-		}
-		console.log(lines);
-	});
-*/
