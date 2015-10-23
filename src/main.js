@@ -34,6 +34,7 @@ function streamChat(timestamp, number, handler) {
 			}
 
 			if(handler(line)) {
+				handler = function() { };
 				readStream.destroy();
 				resolve();
 			}
@@ -66,7 +67,7 @@ function getSomeAfterTimestamp(timestamp, number) {
 		streamChat(timestamp, number, line => {
 			if (line.timestamp > timestamp) {
 				lines.push(line);
-				if(lines.data.length == 10) {
+				if(lines.data.length == number) {
 					return true;
 				}
 			}
